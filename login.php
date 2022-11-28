@@ -41,7 +41,7 @@ if (isset($_SESSION["user"])) {
                     $_SESSION["iduser"] = $user["id"];
                     $_SESSION["user"] = "yes";
 
-                    header("Location: Calendar.html");
+                    header("Location: 24-matchs.html");
                     die();
                 }else{
                     echo "<div class='alert alert-danger'>Password does not match</div>";

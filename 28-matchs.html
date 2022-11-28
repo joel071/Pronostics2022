@@ -264,7 +264,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   border: 0;
-  background-color: #a32a7f;
+  background-color: #2874b2;
   border-radius: 6px;
   padding: 10px 70px;
   color: rgba(rgb(255, 255, 255), 0.9);
@@ -319,7 +319,44 @@ body {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.7);
   }
-  
+  #myBtn {
+
+  display: none; /* Hidden by default */
+
+  position: fixed; /* Fixed/sticky position */
+
+  bottom: 20px; /* Place the button at the bottom of the page */
+
+  right: 30px; /* Place the button 30px from the right */
+
+  z-index: 99; /* Make sure it does not overlap */
+
+  border: none; /* Remove borders */
+
+  outline: none; /* Remove outline */
+
+  background-color: #4ea8e3; /* Set a background color */
+
+  color: white; /* Text color */
+
+  cursor: pointer; /* Add a mouse pointer on hover */
+
+  padding: 15px; /* Some padding */
+
+  border-radius: 10px; /* Rounded corners */
+
+  font-size: 18px; /* Increase font size */
+
+}
+
+
+
+#myBtn:hover {
+
+  background-color: #555; /* Add a dark-grey background on hover */
+
+}
+
   .main-nav li {
     text-align: center;
     margin: 15px auto;
@@ -383,7 +420,9 @@ body {
     }
   }
   </style>
-  <body>
+
+<body onload="myFunction()">
+
     <nav class="navbar">
       <span class="navbar-toggle" id="js-navbar-toggle">
               <i class="fas fa-bars"></i>
@@ -391,9 +430,6 @@ body {
       <a href="#" class="logo">Pronostics</a>
       <ul class="main-nav" id="js-menu">
    
-        <li>
-          <a href="Calendar.html" class="nav-links">Calendar</a>
-        </li>
         <li>
           <a href="logout.php" class="nav-links">Log Out</a>
         </li>
@@ -407,8 +443,17 @@ body {
         <div class="match" >
           <div class="match-header"style=" justify-content: center;
           ">
-            <div class="match-tournament" ><img src="images/CupMondial.png" />World Cup Qatar 2022</div>
-          
+<div class="swiper-prev-button">
+  <a href="27-matchs.html">
+  <em class="material-icons" style="margin-top: 30px;">chevron_left</em>
+</a>
+</div>
+  <div class="match-tournament" ><img src="images/CupMondial.png" />World Cup Qatar 2022</div>
+  <div class="swiper-next-button"><a href="29-matchs.html">
+
+    <em class="material-icons" style="margin-top: 30px;margin-left: 30px;">chevron_right</em></a>
+
+ </div>            
           </div> 
              <div> <hr  style="height: 15px;border: 0;box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);"/>
            </div>
@@ -428,7 +473,7 @@ body {
             <div class="column">
               <div class="match-details">
                 <div class="match-date">
-                  28 Nov at <strong>11:00</strong>
+                  28 Nov at <strong>15:00</strong>
                 </div>
                 
                 <div class="match-time-lapsed">
@@ -439,6 +484,7 @@ body {
                 <form action="insert.php" method="post" >
                   <input type="hidden" name="id" value="17">
                   <input type="hidden" name="NBpage" value="28">
+                  <input type="hidden" name="date" value="15">
 
                   
                                   <select class ="Select" name="selectBar" style="width: 75px;">
@@ -467,7 +513,7 @@ body {
                                   <option value="6">6</option>
                                   <option value="7">7</option>
                               </select>
-                              <button class="match-bet-place" type="submit">save pronostics</button>
+                              <button name="btn"   class="match-bet-place" type="submit">save pronostics</button>
                               
                   
                                   </form>
@@ -516,6 +562,7 @@ body {
           <form action="insert.php" method="post" >
             <input type="hidden" name="id" value="18">
             <input type="hidden" name="NBpage" value="28">
+            <input type="hidden" name="date" value="14">
 
             
                             <select class ="Select" name="selectBar" style="width: 75px;">
@@ -542,7 +589,7 @@ body {
                             <option value="6">6</option>
                             <option value="7">7</option>
                         </select>
-                        <button class="match-bet-place" type="submit">save pronostics</button>
+                        <button name="btn"   class="match-bet-place" type="submit">save pronostics</button>
             
                             </form>
         </div>
@@ -589,6 +636,7 @@ body {
           <form action="insert.php" method="post" >
             <input type="hidden" name="id" value="19">
             <input type="hidden" name="NBpage" value="28">
+            <input type="hidden" name="date" value="17">
 
             
                             <select class ="Select" name="selectBar" style="width: 75px;">
@@ -615,7 +663,7 @@ body {
                             <option value="6">6</option>
                             <option value="7">7</option>
                         </select>
-                        <button class="match-bet-place" type="submit">save pronostics</button>
+                        <button name="btn"   class="match-bet-place" type="submit">save pronostics</button>
             
                             </form>
         </div>
@@ -665,6 +713,7 @@ body {
           <form action="insert.php" method="post" >
             <input type="hidden" name="id" value="20">
             <input type="hidden" name="NBpage" value="28">
+            <input type="hidden" name="date" value="9">
 
             
                             <select class ="Select" name="selectBar" style="width: 75px;">
@@ -691,7 +740,7 @@ body {
                             <option value="6">6</option>
                             <option value="7">7</option>
                         </select>
-                        <button class="match-bet-place" type="submit">save pronostics</button>
+                        <button name="btn"   class="match-bet-place" type="submit">save pronostics</button>
             
                             </form>
         </div>
@@ -721,7 +770,7 @@ body {
 
 </div>
 
-
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
 
@@ -731,7 +780,67 @@ body {
         
         navBarToggle.addEventListener("click", function() {
           mainNav.classList.toggle("active");
-        });</script>
+        });
+        
+        const buttons = document.getElementsByName("btn");
+
+        var dates=document.getElementsByName('date');
+
+        var currenttdate = new Date();
+
+
+        function myFunction() {
+
+          for(let i=0;i<buttons.length;i++){
+
+          if(currenttdate.getDate()>28||(currenttdate.getDate()==28&&dates[i].value==currenttdate.getHours())){
+
+
+         buttons[i].disabled=true;
+
+
+
+  };
+
+};}
+
+let mybutton = document.getElementById("myBtn");
+
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+
+window.onscroll = function() {scrollFunction()};
+
+
+
+function scrollFunction() {
+
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+
+    mybutton.style.display = "block";
+
+  } else {
+
+    mybutton.style.display = "none";
+
+  }
+
+}
+
+
+
+// When the user clicks on the button, scroll to the top of the document
+
+function topFunction() {
+
+  document.body.scrollTop = 0; // For Safari
+
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+}
+        
+        </script>
 
       
       </body>
