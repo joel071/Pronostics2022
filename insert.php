@@ -23,7 +23,7 @@ $host = "localhost";
     }
 
     // using sql to create a data entry query
-  
+  else if(!empty($selectBar)&&!empty($selectBar1)){
     $sql = "INSERT INTO matches (equipe1,equipe2,idMatch, iduser) VALUES ('$selectBar','$selectBar1','$id','$iduser')"; 
 
     // send query to the database to add values and confirm if successful
@@ -31,8 +31,9 @@ $host = "localhost";
     if($rs)
     {
         header("Location: $retour");
-    }
-  
+    }}
+    header("Location: $retour");
+
     // close connection
 
 ?>

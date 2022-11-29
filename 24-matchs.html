@@ -484,7 +484,7 @@ background-color: #555; /* Add a dark-grey background on hover */
                   <input type="hidden" name="date" value="11">
 
                   
-                                  <select class ="Select" name="selectBar" style="width: 75px;">
+                                  <select class ="Select" id="selectBar" name="selectBar" style="width: 75px;">
                                     <option value="default"></option>
                                     <option value="1">0</option>
 
@@ -500,7 +500,7 @@ background-color: #555; /* Add a dark-grey background on hover */
                                 </select>
                                 <button class="match-bet-option" type="button" disabled>VS</button>
 
-                                <select class ="Select" name="selectBar1" style="width: 75px;">
+                                <select class ="Select" id="selectBar1" name="selectBar1" style="width: 75px;">
                                   <option value="default"></option>
                                   <option value="1">0</option>
 
@@ -564,7 +564,7 @@ background-color: #555; /* Add a dark-grey background on hover */
             <input type="hidden" name="date" value="14">
 
             
-                            <select class ="Select" name="selectBar" style="width: 75px;">
+                            <select class ="Select" id="selectBar" name="selectBar" style="width: 75px;">
                               <option value="default"></option>
                               <option value="1">0</option>
 
@@ -578,7 +578,7 @@ background-color: #555; /* Add a dark-grey background on hover */
                           </select>
                           <button class="match-bet-option" type="button" disabled>VS</button>
             
-                          <select class ="Select" name="selectBar1" style="width: 75px;">
+                          <select class ="Select" id="selectBar1" name="selectBar1" style="width: 75px;">
                             <option value="default"></option>
                             <option value="1">0</option>
 
@@ -641,7 +641,7 @@ background-color: #555; /* Add a dark-grey background on hover */
 
 
             
-                            <select class ="Select" name="selectBar" style="width: 75px;">
+                            <select class ="Select"id="selectBar"  name="selectBar" style="width: 75px;">
                               <option value="default"></option>
                               <option value="1">0</option>
 
@@ -655,7 +655,7 @@ background-color: #555; /* Add a dark-grey background on hover */
                           </select>
                           <button class="match-bet-option" type="button" disabled>VS</button>
             
-                          <select class ="Select" name="selectBar1" style="width: 75px;">
+                          <select class ="Select" id="selectBar1" name="selectBar1" style="width: 75px;">
                             <option value="default"></option>
                             <option value="1">0</option>
 
@@ -720,7 +720,7 @@ background-color: #555; /* Add a dark-grey background on hover */
             <input type="hidden" name="NBpage" value="24">
             <input type="hidden" name="date" value="20">
 
-                            <select class ="Select" name="selectBar" style="width: 75px;">
+                            <select class ="Select" id="selectBar" name="selectBar" style="width: 75px;">
                               <option value="default"></option>
                               <option value="0">0</option>
 
@@ -734,7 +734,7 @@ background-color: #555; /* Add a dark-grey background on hover */
                           </select>
                           <button class="match-bet-option" type="button" disabled>VS</button>
             
-                          <select class ="Select" name="selectBar1" style="width: 75px;">
+                          <select class ="Select" id="selectBar1" name="selectBar1" style="width: 75px;">
                             <option value="default"></option>
                             <option value="0">0</option>
 
@@ -848,6 +848,16 @@ function topFunction() {
 
 }
 
+var select = document.getElementById("selectBar1");
+var select1=document.getElementById("selectBar");
+var selectedValue = select.options[select.selectedIndex].value;
+var selectedValue = select1.options[select1.selectedIndex].value;
+
+function isEmpty(){
+  if(selectedValue=="default"||selectedValue=="default"){
+    alert("Please complete all fields !");
+  };
+} 
 
         </script>
 
